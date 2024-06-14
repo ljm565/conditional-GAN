@@ -103,7 +103,7 @@ CGAN은 vanilla GAN에 condition을 추가하여 학습한 모델입니다. MNIS
 
 ## 결과
 * CGAN 결과<br><br>
-<img src="docs/figs/generation_gif.gif" width="50%"><br><br>
-<img src="docs/figs/RealAndFake.png" width="100%"><br><br>
+<img src="images/generation_gif.gif" width="50%"><br><br>
+<img src="images/RealandFake.png" width="100%"><br><br>
 <br><br><br>
 
