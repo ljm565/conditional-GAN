@@ -101,7 +101,7 @@ def draw(real_data, fake_data, path, nrow):
     plt.subplot(1,2,2)
     plt.axis("off")
     plt.title("Fake Images")
-    plt.imshow(np.transpose(make_grid(fake_data[:nrow**2], nrow=nrow, padding=5, normalize=True).cpu(), (1,2,0)))
+    plt.imshow(np.transpose(make_grid(fake_data[:nrow**2].cpu(), nrow=nrow, padding=5, normalize=True).cpu(), (1,2,0)))
     
     plt.tight_layout()
     plt.savefig(path)
