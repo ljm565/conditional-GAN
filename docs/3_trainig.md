@@ -12,7 +12,7 @@ seed: 0
 deterministic: True
 
 # environment config
-device: cpu     # examples: [0], [0,1], [1,2,3], cpu... 
+device: cpu     # examples: [0], [0,1], [1,2,3], cpu, mac: mps... 
 
 # project config
 project: outputs/CGAN
