@@ -18,8 +18,8 @@ convert2grayscale: False
 # data config
 workers: 0               # Don't worry to set worker. The number of workers will be set automatically according to the batch size.
 MNIST_train: True        # if True, MNIST will be loaded automatically.
-class_num: 10
-label_dim: 32
+class_num: 10            # Number of image label classes.
+label_dim: 32            # Class information embedding dimension.
 MNIST:
     path: data/
     MNIST_valset_proportion: 0.2      # MNIST has only train and test data. Thus, part of the training data is used as a validation set.
