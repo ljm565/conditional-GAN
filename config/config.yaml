@@ -30,7 +30,7 @@ CUSTOM:
 
 # train config
 batch_size: 128
-epochs: 1
+epochs: 200
 lr: 0.0002
 hidden_dim: 256
 noise_init_size: 128
