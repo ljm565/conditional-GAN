@@ -100,8 +100,8 @@ class Trainer:
 
         # init ddp
         if self.is_ddp:
-            torch.nn.parallel.DistributedDataParallel(generator, device_ids=[self.device])
-            torch.nn.parallel.DistributedDataParallel(discriminator, device_ids=[self.device])
+            generator = torch.nn.parallel.DistributedDataParallel(generator, device_ids=[self.device])
+            discriminator = torch.nn.parallel.DistributedDataParallel(discriminator, device_ids=[self.device])
         
         return generator, discriminator
 
@@ -300,6 +300,7 @@ class Trainer:
                 # upadate logs and save model
                 self.training_logger.update_phase_end(phase, printing=True)
                 if is_training_now:
+                    model = {'generator': self.generator.module, 'discriminator': self.discriminator.module} if self.is_ddp else {'generator': self.generator, 'discriminator': self.discriminator}
                     self.training_logger.save_model(
                         self.wdir, 
                         {'generator': self.generator, 'discriminator': self.discriminator}
